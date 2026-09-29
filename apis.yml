@@ -1,23 +1,58 @@
 aid: bloomdiagnostics
+
 name: Bloomdiagnostics
-description: 'Bloomdiagnostics is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: 'Bloomdiagnostics provides a smart diagnostic system that combines laboratory technology with personalized analysis. Their platform offers a range of tests, including inflammation, kidney, ferritin, and ovarian reserve assessments, delivering detailed results through an online portal.'
+
 url: https://raw.githubusercontent.com/api-evangelist/bloomdiagnostics/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-29 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-29'
+
 modified: '2026-09-29'
+
 tags:
 - Company
-apis: []
+- Diagnostics
+- Healthcare
+- LabTech
+- PersonalizedMedicine
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/bloomdiagnostics-hosts.yml
+- type: DomainSecurity
+  url: security/bloomdiagnostics-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/bloomdiagnostics
+  url: https://bloomdiagnostics.com
+
+apis: []
+
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: The company website provides no developer documentation or API reference.
+  evidence:
+    - url: https://bloomdiagnostics.com
+      status: 200
+  checked: '2026-09-29'
+x-enrichment:
+  date: '2026-09-29'
+  status: enriched
+  artifacts_added: 5
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
